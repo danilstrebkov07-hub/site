@@ -8,8 +8,8 @@ export default function Services() {
   return (
     <section id="services" className="section">
       <div className="container">
-        <div className="section-title">Наши услуги</div>
-        <div className="section-sub">Что мы предлагаем нашим клиентам.</div>
+        <div className="section-title">Что мы делаем</div>
+        <div className="section-sub">Три правила, по которым работает магазин.</div>
         <div className="services-grid">
           {services.map(s => (
             <div key={s.title} className="service-card">

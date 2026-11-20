@@ -6,7 +6,7 @@ interface Product {
   price: number
   category: string
   image: string
-  desc: string
+  desc?: string
 }
 
 interface CatalogProps {
@@ -22,8 +22,8 @@ export default function Catalog({ products, onAdd }: CatalogProps) {
   return (
     <section id="catalog" className="section">
       <div className="container">
-        <div className="section-title">Каталог товаров</div>
-        <div className="section-sub">Выбирайте по категориям и добавляйте в корзину.</div>
+        <div className="section-title">Каталог</div>
+        <div className="section-sub">Одежда, обувь и аксессуары — подобрать можно за один вечер.</div>
         <div className="filter-bar">
           {categories.map(cat => (
             <button
@@ -41,14 +41,15 @@ export default function Catalog({ products, onAdd }: CatalogProps) {
               <div className="product-img">
                 <img src={p.image} alt={p.name} />
               </div>
-              <div className="product-info">
-                <div className="category">{p.category}</div>
-                <h3>{p.name}</h3>
-                <span className="price">{p.price} ₽</span>
-                <button className="add-btn" onClick={() => onAdd(p.id)}>
-                  В корзину
-                </button>
-              </div>
+                <div className="product-info">
+                  <div className="product-category">{p.category}</div>
+                  <h3>{p.name}</h3>
+                  <div className="product-price">{p.price} ₽</div>
+                  <div className="product-stock">В наличии</div>
+                  <button className="add-btn" onClick={() => onAdd(p.id)}>
+                    В корзину
+                  </button>
+                </div>
             </div>
           ))}
         </div>

@@ -1,5 +1,4 @@
 interface CartItemProps {
-  item: { id: number }
   product: { name: string; price: number; image: string }
   onRemove: () => void
 }
