@@ -272,13 +272,19 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
+      .hero { min-height: 420px; padding: 40px 0; }
       .hero h1 { font-size: 1.75rem; }
-      .hero-product { width: 300px; height: 220px; bottom: -40px; }
-      .hero-product-inner { width: 220px; height: 160px; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .container { padding: 0 16px; }
+      .section { padding: 48px 0; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-img { height: 140px; }
+      .product-info { padding: 12px; }
+      .product-card h3 { font-size: 0.85rem; margin-bottom: 6px; }
+      .product-price { font-size: 1rem; color: var(--text); margin-bottom: 4px; }
+      .product-stock { font-size: 0.7rem; margin-bottom: 10px; }
+      .add-btn { padding: 10px; font-size: 0.85rem; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
       .cart-drawer { width: 100%; }
-      .hero { min-height: 560px; }
     }
   </style>
 </head>
